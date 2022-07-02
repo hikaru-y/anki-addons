@@ -1,0 +1,37 @@
+{
+    "name": "anki_addons",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "@bazel/bazelisk": "latest",
+        "@bazel/buildifier": "latest",
+        "@bazel/buildozer": "^5.1.0",
+        "@bazel/esbuild": "^5.5.1",
+        "@bazel/ibazel": "latest",
+        "@bazel/typescript": "^5.5.1",
+        "@tsconfig/svelte": "^3.0.0",
+        "@typescript-eslint/eslint-plugin": "^5.30.3",
+        "@typescript-eslint/parser": "^5.30.3",
+        "esbuild": "^0.14.48",
+        "esbuild-sass-plugin": "^2.2.6",
+        "esbuild-svelte": "^0.7.1",
+        "eslint": "^8.19.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-svelte3": "^4.0.0",
+        "prettier": "^2.7.1",
+        "prettier-plugin-svelte": "^2.7.0",
+        "sass": "^1.53.0",
+        "svelte": "^3.48.0",
+        "svelte-check": "^2.8.0",
+        "svelte-preprocess": "^4.10.7",
+        "svelte2tsx": "^0.5.11",
+        "tslib": "^2.4.0",
+        "typescript": "^4.7.4"
+    },
+    "scripts": {
+        "build": "bazel build //...",
+        "test": "bazel test //...",
+        "pkg:sample": "bazel build //packages/sample"
+    },
+    "type": "module"
+}

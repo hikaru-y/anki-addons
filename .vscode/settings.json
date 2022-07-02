@@ -1,0 +1,35 @@
+{
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "editor.formatOnSave": true,
+    "files.eol": "\n",
+    "files.exclude": {
+        "**/.mypy_cache": true,
+        "**/__pycache__": true
+    },
+    "files.insertFinalNewline": true,
+    "files.watcherExclude": {
+        "anki/**": true,
+        "dist/**": true
+    },
+    "git.ignoreLimitWarning": true,
+    "python.analysis.extraPaths": [
+        "anki/qt",
+        "anki/pylib"
+    ],
+    "python.formatting.provider": "black",
+    "python.linting.enabled": true,
+    "python.linting.flake8Args": [
+        "--config=.flake8"
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "search.exclude": {
+        "dist": true
+    },
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "workbench.editor.enablePreview": false
+}

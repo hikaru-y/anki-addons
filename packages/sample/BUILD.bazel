@@ -1,0 +1,10 @@
+load("//tools:addon.bzl", "local_deploy", "pkg_addon")
+
+pkg_addon(
+    sub_labels = [
+        "python",
+        "web",
+    ],
+)
+
+local_deploy()

@@ -1,0 +1,32 @@
+load("@npm//@bazel/esbuild:index.bzl", "esbuild")
+load("@rules_pkg//pkg:mappings.bzl", "pkg_files")
+
+filegroup(
+    name = "esbuild_deps",
+    srcs = glob([
+        "src/**/*",
+    ]),
+)
+
+esbuild(
+    name = "bundle",
+    config = "//:esbuild_config",
+    entry_point = "src/index.ts",
+    external = [
+        "anki",
+        "svelte/store",
+        "svelte/internal",
+    ],
+    minify = False,
+    sources_content = True,
+    deps = [":esbuild_deps"],
+)
+
+pkg_files(
+    name = "web",
+    srcs = [
+        ":bundle",
+    ],
+    prefix = "/web",
+    visibility = ["//visibility:public"],
+)
