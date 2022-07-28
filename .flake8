@@ -1,0 +1,12 @@
+# https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html#line-length
+[flake8]
+max-line-length = 88
+extend-ignore = E203
+exclude =
+    .git,
+    __pycache__,
+    .mypy_cache,
+    dist,
+    node_modules,
+    ; https://github.com/microsoft/vscode-python/issues/18694
+    anki/*
